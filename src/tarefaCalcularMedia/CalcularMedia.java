@@ -17,21 +17,23 @@ public class CalcularMedia {
 	
 	private static void notaAnual() {
 		
-		double pt = 7.5;
-		double st = 6;
-		double tt = 8.6;
-		double qt = 2;
+		double pb = 7.5;
+		double sb = 7;
+		double tb = 8.6;
+		double qb = 8;
 		
-		double totalNotas = pt + st + tt + qt;
+		double totalNotas = pb + sb + tb + qb;
+	
+		double mediaFinal = totalNotas / 4;
+	
 		
-		if(totalNotas >= 28) {
-			System.out.println("A nota final foi: " + totalNotas + " " + "aprovado");
-		}else if(totalNotas >= 20 && totalNotas <28) {
-			System.out.println("A nota final foi: " + totalNotas + " " + "recuperação");
+		if(mediaFinal >= 7) {
+			System.out.printf("Aprovado, nota média final foi =  %.2f %n " , mediaFinal);
+		}else if(mediaFinal >= 5 && mediaFinal <7) {
+			System.out.printf("Em recuperação, nota média final foi = %.2f %n " , mediaFinal);
 		}else {
-			System.out.println("A nota final foi: " + totalNotas + " " + "reprovado");
+			System.out.printf("Reprovado, A nota média final foi = %.2f %n " , mediaFinal);
 		}
-		
 		
 	}
 	
